@@ -9,6 +9,7 @@
 		<title>LockMaster| Аварийное открытие замков</title>
 	</head>
 	<body>
+		<div class="top"><div class="container-fluid attention"><center>Внимание! Мастер приступает к работе только убедившись в праве собственности.</center></div></div>
 		<div class="container-fluid">
 			<div class="header">
 				<div class="row">

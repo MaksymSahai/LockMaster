@@ -1,5 +1,6 @@
 <?php
 	include_once ROOT.'/models/Admin.php';
+	include_once ROOT.'/models/Reviews.php';
 	
 	class AdminController
 	{
@@ -12,7 +13,7 @@
 				
 			} else {
 				
-				require_once(ROOT.'/views/admin_dashboard.php');
+				header('Location:/admin/review');
 				return;
 								
 			}
@@ -38,16 +39,16 @@
 			
 			if( empty( $data ) || empty( $data['log'] ) || empty( $data['pass'] ) ){
 				header('Location:/admin/login');
+				return;
 			}
 			
 			if( $data['log'] != $admin['admin_login'] || $data['pass'] != $admin['admin_password'] ){
 				header('Location:/admin/login');
+				return;
 			}
-			else
-			{
-				setCookie("session",serialize($admin),time()+3600);
-				header('Location:/admin');
-			}
+			
+			setCookie("session",serialize($admin),time()+3600);
+			header('Location:/admin');
 		}
 		public function actionExit()
 		{
@@ -59,6 +60,16 @@
 			else{
 				header('Location:/admin/login');
 			}
+		}
+		
+		public function actionReview()
+		{
+			$reviewsListNoAprove = array();
+			$reviewsListNoAprove = Reviews::getReviewsListNoAprove();
+			$reviewsList = array();
+			$reviewsList = Reviews::getReviewsList();
+			require_once(ROOT.'/views/admin_review.php');		
+			return true;
 		}
 	}
 
