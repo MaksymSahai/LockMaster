@@ -5,14 +5,18 @@
 	class ReviewController
 	{
 		public function actionList()
-		{			
+		{
+			if(!empty($_POST))
+			{
+				$this->AddReview();
+			}
 			$reviewsList = array();
 			$reviewsList = Reviews::getReviewsList();
 			require_once(ROOT.'/views/reviews.php');		
 			return true;
 		}
 		
-		public function actionAddReview()
+		public function AddReview()
 		{
 			$name = $_POST['name'];
 			$name = htmlspecialchars($name);
@@ -23,8 +27,6 @@
 			$text = stripslashes($text);
 			$text = trim($text);
 			$error = '';
-			if(!$name || strlen($name) < 3 || strlen($name) > 35) {$error .= 'Укажите свое имя (3-35 символов).';}
-			if(!$text || strlen($text) < 5 ) {$error .= 'Напишите отзыв (от 5 символов). ';}
 			
 			if(!$error)
 			{

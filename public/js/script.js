@@ -3,11 +3,11 @@
 		var str = $(this).serialize();
 		$.ajax({
 			type: "POST",
-			url: "/review/addReview",
+			url: "/review",
 			data: str,
 			success: function(msg){
-				if (msg){
-					result = '<div class="good">Спасибо! Ваш отзыв отправлен.</div>';
+				if(msg == 'OK') {
+					result = '<div class="ok">Сообщение отправлено</div>';
 					$("#fields").hide();
 				}
 				else {result = msg;}
@@ -16,5 +16,4 @@
 		});
 		return false;
 	});
-	
 });

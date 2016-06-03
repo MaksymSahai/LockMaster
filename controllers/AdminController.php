@@ -71,6 +71,34 @@
 			require_once(ROOT.'/views/admin_review.php');		
 			return true;
 		}
+		
+		public function actionDelete()
+		{
+			$id = $_POST['id'];
+			$id = htmlspecialchars($id);
+ 			$id = stripslashes($id);
+ 			$id = trim($id);
+			
+			if(!empty($id))
+			{
+				$delete = Reviews::deleteReview($id);
+				header('Location:/admin');
+			}
+		}
+		
+		public function actionUpdate()
+		{
+			$id = $_POST['id'];
+			$id = htmlspecialchars($id);
+ 			$id = stripslashes($id);
+ 			$id = trim($id);
+			
+			if(!empty($id))
+			{
+				$update = Reviews::updateReview($id);
+				header('Location:/admin');
+			}
+		}
 	}
 
 ?>
