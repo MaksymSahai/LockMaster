@@ -2,6 +2,7 @@
 	return array(
 		'' => 'home/index',
 		'review' => 'review/list',
+		'review/addReview' => 'review/addReview',
 		'key' => 'menu/key',
 		'auto' => 'menu/auto',
 		'safe' => 'menu/safe',

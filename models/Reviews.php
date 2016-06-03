@@ -78,6 +78,23 @@
 			return $reviewsListNoAprove;
 		}
 		
+		public static function addReview($namer, $textr)
+		{
+			$db = Db::getConnection();
+			$addrev = $db->prepare("INSERT INTO reviews (review_name, review_date, review, review_status) VALUES (?, ?, ?, ?)");
+			$addrev->bindParam(1, $name);
+			$addrev->bindParam(2, date("Y-m-d"));
+			$addrev->bindParam(3, $text);
+			$addrev->bindParam(4, $status);
+			
+			$name = $namer;
+			$text = $textr;
+			$status = 0;
+			$addrev->execute();
+			
+			return true;
+		}
+		
 	}
 
 ?>
