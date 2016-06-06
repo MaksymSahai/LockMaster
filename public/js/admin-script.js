@@ -1,47 +1,36 @@
 ﻿$('.btn-del').on('click', function(){
-        var     f = $(this).attr('data-id');   // это уникальный id записи
-        console.log(f);
+        var id = $(this).attr('data-id');
+        console.log(id);
 
-        r = $.ajax({
-          type: 'POST',
-          url: '/admin/review-delete/',
-          data: {id:f},
-          dataType: 'html',
-		  success:function(data){
-				alert(data)
-			}
-        }); 
-
-        if(r){
-                console.log('yyy');
-        }
-        else{
-                console.log('nnn');
-        }
+		if (confirm("Вы действительно хотите удалить отзыв?" , "Удалить отзыв"))
+		{
+			$.ajax({
+			type: "POST",
+			url: "/admin/review-delete/",
+			data: ({id:id}),
+			success:function(data){
+				location.reload();
+				}
+			}); 
+		}
+			
+        
 
                            
 });
 
 $('.btn-upd').on('click', function(){
-        var     f = $(this).attr('data-id');   // это уникальный id записи
-        console.log(f);
-
-        r = $.ajax({
-          type: 'POST',
-          url: '/admin/review-update/',
-          data: {id:f},
-          dataType: 'html',
-		  success:function(data){
-				alert(data)
-			}
-        }); 
-
-        if(r){
-                console.log('yyy');
-        }
-        else{
-                console.log('nnn');
-        }
-
+        var     id = $(this).attr('data-id');
+		if (confirm("Вы действительно хотите подтвердить отзыв?"))
+		{
+			$.ajax({
+			type: "POST",
+			url: "/admin/review-update/",
+			data: ({id:id}),
+			success:function(data){
+					location.reload();
+				}
+			}); 
+		}
                            
 });

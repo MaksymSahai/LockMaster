@@ -106,6 +106,7 @@
 			$db = Db::getConnection();
 			$addrev = $db->query("UPDATE reviews SET review_status = 1 WHERE review_id = $id");
 		}
+		
 	}
 
 ?>

@@ -1,5 +1,5 @@
 ﻿<?php
-///	include ROOT.'/components/count.php';
+    ///include ROOT.'/components/count.php';
 	include_once ROOT.'/models/Reviews.php';
 	
 	class ReviewController
@@ -27,13 +27,7 @@
 			$text = stripslashes($text);
 			$text = trim($text);
 			$error = '';
-			
-			if(!$error)
-			{
-				$add = Reviews::addReview($name, $text);
-				
-			}
-			else {echo '<div class="err">'.$error.'</div>';}
+			$add = Reviews::addReview($name, $text);
 		}
 	}
 

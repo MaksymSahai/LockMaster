@@ -5,6 +5,9 @@ html{
 	font-family: sans serif;
 	color: #000;
 }
+body{
+	background-color: #F2F3F4;
+}
 .admin-header{
 	height: 100px;
 	width: 100%;
@@ -17,6 +20,23 @@ h1{
 	margin: 0 auto;
 	width: 1024px;
 }
+table{
+	border-collapse: collapse;
+	
+}
+td, th {
+    padding: 5px;
+	margin-bottom: 5px;	/* Поля вокруг содержимого ячеек */
+   }
+   th {
+    text-align: left; /* Выравнивание по левому краю */
+    background: black; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border: 1px solid white; /* Рамка вокруг ячеек */
+   }
+   td {
+    border-bottom: 1px solid black;
+   }
 .exit{
 	width: 30%;
 	float: right;
@@ -24,19 +44,26 @@ h1{
 .list-review{
 	width: 100%;
 }
-.reviews-block-id{
-	width: 75px;
-	float: left;
-}
-.reviews-block-name{
-	width: 150px;
-	float: left;
-}
-.reviews-block-text{
-	width: 500px;
-	height: auto;
-	float: left;
-}
-.reviews-block-date{
 
+.wrap{
+	margin: 0 auto;
+	width: 500px;
+	font-size: 20px;
+}
+.login-form{
+	margin-top: 10%;
+}
+.login{
+	margin-top: 20px;
+	margin-bottom: -20px;
+}
+.btn-upd{
+	background-color: #32CD32;
+	margin: 3px;
+	margin-left: 20px;
+}
+.btn-del{
+	background-color: #FF4500;
+	margin: 3px;
+	margin-left: 20px;
 }

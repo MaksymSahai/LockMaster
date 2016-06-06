@@ -1,4 +1,4 @@
-﻿JQuery(document).ready(function($){
+﻿$(document).ready(function($){
 	$("#contact").submit(function(){
 		var str = $(this).serialize();
 		$.ajax({
@@ -6,12 +6,9 @@
 			url: "/review",
 			data: str,
 			success: function(msg){
-				if(msg == 'OK') {
-					result = '<div class="ok">Сообщение отправлено</div>';
-					$("#fields").hide();
-				}
-				else {result = msg;}
-				$('#note').html(result);
+				document.getElementById('ok' ).style.display = 'block';
+				$("#fields").hide();
+				/*location.reload();*/
 			}
 		});
 		return false;

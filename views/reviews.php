@@ -6,7 +6,7 @@
 			<div class="send-review" >
 				<p class="send-review-title title">Оставить отзыв</p>
 				<form id="contact" method="POST" action="/review">
-					<div id="note"></div>
+					<div id="ok"><center>Сообщение отправлено</center></div>
 					<div id="fields">
 						<p class="title send-review-subtitle">Представтесь</p>
 						<input class="send-review-name" name="name" id="name" type="text" maxlength="50" placeholder="Введите Ваше имя" /></br>
