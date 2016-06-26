@@ -78,13 +78,19 @@ a.title:hover{
 	color: #39a1d0;
 }
 section:first-of-type{
-	 justify-content: space-around;
+	-webkit-justify-content: space-around;
+	-o-justify-content: space-around;
+	-ms-justify-content: space-around;
+	justify-content: space-around;
 }
 section:last-of-type {
     justify-content: space-between;
 }
 section {
-    display: flex;
+    -o-display: flex;
+	-webkit-display: flex;
+	-ms-display: flex;
+	display: flex;
     width: 100%;
     margin: 0 auto;
     padding: 15px 0 5px 0;
@@ -258,6 +264,8 @@ section {
 	
 }
 .section-nav{
+	/*-webkit-flex-wrap: nowrap;
+	-moz-flex-wrap: nowrap;*/
 	flex-wrap: wrap;
 }
 #key{

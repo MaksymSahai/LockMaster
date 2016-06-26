@@ -63,7 +63,7 @@
 						<div class="img keys"></div>
 					</div>
 				</section>
-				<center><div class="write-review"><a href="/review">Написать отзыв</p></div></center>
+				<center><div class="write-review"><a href="/review">Написать отзыв</a></div></center>
 			</div>
 			
 <?php include ROOT.'/views/layout/footer.php'?>
