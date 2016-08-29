@@ -13,10 +13,6 @@
 				}
 			}); 
 		}
-			
-        
-
-                           
 });
 
 $('.btn-upd').on('click', function(){
@@ -32,5 +28,4 @@ $('.btn-upd').on('click', function(){
 				}
 			}); 
 		}
-                           
 });

@@ -10,4 +10,3 @@
 			return new PDO($dsn, $params['user'], $params['pass']);
 		}
 	}
-?>

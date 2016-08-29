@@ -41,4 +41,3 @@
 			$db->query("INSERT INTO `visits`(`date`, `hosts`, `views`) VALUES ($date, 1, 1)");
 		}
 	}
-?>

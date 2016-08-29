@@ -30,5 +30,3 @@
 			$add = Reviews::addReview($name, $text);
 		}
 	}
-
-?>

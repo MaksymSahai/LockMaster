@@ -23,21 +23,6 @@ ul{
 .container-fluid{
 	max-width: 1024px;
 }
-.top{
-	position: fixed;
-	width: 100%;
-	/*background-color: rgba(240, 128, 128, 0.5);*/
-	background-color: rgba(178, 178, 178, 0.5);
-	height: 50px;
-	z-index: 999;
-}
-.attention{
-	font-family: arial;
-	font-size: 20px;
-	color: #ff0000;
-	margin: 0 auto;
-	line-height: 50px;
-}
 .cleafix:before, .clearfix:after {clear:both;display:block;content: ''; }
 #wrapper{
 	width: 1080px;
@@ -73,7 +58,6 @@ ul{
 	display: block;
 	text-align: center;
 }
-
 a.title:hover{
 	color: #39a1d0;
 }
@@ -95,6 +79,7 @@ section {
     margin: 0 auto;
     padding: 15px 0 5px 0;
 }
+
 .list-avto{
 	margin-right: 20px;
 }
@@ -108,12 +93,26 @@ section {
 	font-size: 18px;
 	border-bottom: 2px solid rgba(101,120,160,0.6);
 }
-
+/*Fixed Message*/
+.top{
+	position: fixed;
+	width: 100%;
+	background-color: rgba(178, 178, 178, 0.5);
+	height: 50px;
+	z-index: 999;
+}
+.attention{
+	font-family: arial;
+	font-size: 20px;
+	color: #ff0000;
+	margin: 0 auto;
+	line-height: 50px;
+}
+/*Header*/
 .header{
 	height: 250px;
 	margin-top: 30px;
 }
-
 .info{
 	width: 400px;
 	float: left;
@@ -139,7 +138,6 @@ section {
 .info *{
 	margin: 0 auto;
 }
-
 .phones{
 	width: 290px;
 	height: 150px;

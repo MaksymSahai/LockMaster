@@ -14,4 +14,3 @@
 		'admin/exit' => 'admin/exit',
 		'admin/process' => 'admin/process'
 	);
-?>
